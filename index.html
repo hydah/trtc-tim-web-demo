@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Realtime communication with WebRTC</title>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <h1>AvChat using TRTC</h1>
+
+  <textarea id="userID" disabled
+    placeholder="user0"></textarea>
+
+  <div id="loginbuttons">
+    <button id="loginButton">Login</button>
+    <button id="logoutButton">Logout</button>
+  </div>
+
+  <textarea id="callID" disabled
+  placeholder="user1"></textarea>
+  <div id="callbuttons">
+    <button id="callButton">Call</button>
+    <button id="hangButton">Hang Up</button>
+    <button id="dialedButton" disabled="">Dialed</button>
+  </div>
+
+  <!-- <video id="localVideo" autoplay playsinline></video>
+  <video id="remoteVideo" autoplay playsinline></video> -->
+
+  <div id="video-grid" style="height: 100%; flex: 1">
+    <!-- 主视频 -->
+    <div id="main-video" class="video-box col-div" style="justify-content: flex-end">
+    </div>
+    <!-- remote -->
+    <div id="remote-video" class="video-box col-div" style="justify-content: flex-end">
+    </div>
+
+</div>
+
+  <script src="debug/lib-generate-test-usersig.min.js" type="text/javascript"></script>
+  <script src="debug/GenerateTestUserSig.js" type="text/javascript"></script>
+  <script src="sdk/tim-js.js"></script>
+  <script src="sdk/trtc.js"></script>
+  <script src="./rtc-client.js"></script>
+  <script src="./trtcCustomMessageMap.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
